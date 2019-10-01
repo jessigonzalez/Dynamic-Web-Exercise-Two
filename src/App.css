@@ -1,0 +1,30 @@
+.body {
+  box-sizing: border-box;
+}
+.App {
+}
+/*.FlexBox*/
+.WeatherNav {
+  display: flex;
+  flex-direction: row;
+
+  align-content: center;
+  justify-content: flex-end;
+
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.WeatherNav__Item {
+  color: black;
+  font-size: 20px;
+  margin: 0 20px;
+  padding: 10px;
+}
+
+.WeatherNav__Item--active {
+  background-color: yellow;
+  color: red;
+}
