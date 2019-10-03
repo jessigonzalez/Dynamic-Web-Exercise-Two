@@ -55,7 +55,7 @@ export default function Home(props){
     </div>
     /*
     <PageWrapper cloudy={cloudy}>
-    
+
     <div className="WeatherNav">
       <a className={`WeatherNav__Item ${city =='Seoul' ? 'WeatherNav__Item--active' : ''}`} href="/?city=Seoul">Seoul</a>
       <a className={`WeatherNav__Item ${city =='London' ? 'WeatherNav__Item--active' : ''}`} href="/?city=London">London</a>
