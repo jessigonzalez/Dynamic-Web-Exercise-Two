@@ -46,7 +46,7 @@ export default function Home(props){
   console.log('weather', weather);
 
   return(
-    
+
     <div>
       <h1>Weather in {city}</h1>
       <p>Humidity: {weather.data && weather.data.main.humidity}</p>
