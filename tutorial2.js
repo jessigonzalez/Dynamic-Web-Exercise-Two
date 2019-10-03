@@ -1,5 +1,6 @@
+import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCloudRain, faCloud, faSun, faWind} from '@fortawesome-free-solid-svg-icons';//
+import {faCloudRain, faCloud, faSun, faWind} from '@fortawesome-free-solid-svg-icons';
 
 export default function WeatherIcon({weatherType}){
   switch(weatherType){
