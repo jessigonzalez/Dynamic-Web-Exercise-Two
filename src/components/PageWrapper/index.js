@@ -20,7 +20,7 @@ export default function PageWrapper({cloudy,children}){
     if(currentTime >19 || currentTime <5){
       currentSky = night;
     }
-    
+
   return(
     <div style={
       height: '100%';
