@@ -3,6 +3,10 @@
 }
 .App {
 }
+.PageWrapper{
+  margin: auto;
+  align-content: center;
+}
 /*.FlexBox*/
 .WeatherNav {
   display: flex;
@@ -27,4 +31,22 @@
 .WeatherNav__Item--active {
   background-color: yellow;
   color: red;
+}
+
+.successMessage{
+  background-color: rgba(179,255,191);
+  border: 1px solid green;
+  border-radius: 5px;
+  display: block;
+  margin: 20px 0;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  top: 0;
+  transition: backgroundColor 500ms ease, top 200ms ease;
+}
+
+.successMessage:hover{
+  background-color: rgba(179,255,191,0.1);
+  top: 5px;
 }
