@@ -17,19 +17,24 @@ export default function PageWrapper({cloudy,children}){
     if(cloudy>50){
       currentSky = cloudySky
     }
-    if(currentTime >19 || currentTime <5){
+    if(currentTime > 19 || currentTime <5){
       currentSky = night;
     }
-    
+
   return(
-    <div style={
-      height: '100%';
-      width:'100%';
-      minHeight: '100vh';
-      minWidth:'100vw';
-      backgroundColor: `rgba(0,0,0,${wrapperOpacity})`
-    }}>
-      {children}
-    </div>
-  )
+      //<div style="height:100%; width: 100%; minHeight: 100vh; minWidth: 100vw; backgroundColor: `rgba(0,0,0,${wrapperOpacity})`">
+      <div className = "PageWrapper">
+        {children}
+      </div>
+  );
 }
+/*
+<div style=""
+  height = 100%,
+  width = 100%,
+  minHeight = 100vh,
+  minWidth = 100vw,
+  backgroundColor= `rgba(0,0,0,${wrapperOpacity})`
+</div>
+}>
+*/
