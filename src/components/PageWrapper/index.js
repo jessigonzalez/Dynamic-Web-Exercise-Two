@@ -2,24 +2,28 @@ import React from 'react';
 
 export default function PageWrapper({cloudy,children}){
     const wrapperOpacity = cloudy ? (cloudy * 0.01) : 0;
-    const currentSky = "170,180,186";
-    const updatedCurrentSky = "242, 194, 155";
+    const cloudySky = "130,130,130";
+    const modCloudySky = "194,204,208";
+    const sunnySky = "235, 165, 111";
 
-    if (cloudy > 80){
+    if (cloudy > 30 && cloudy < 60){
       return(
-        <div style={{height:"100%",width:"100%",minHeight:"100vh",minWidth:"100vw",backgroundColor:`rgba(${currentSky}, ${wrapperOpacity})`}}>
-          <div className="PageWrapper cloudyVersion">
+        <div style={{height:'100%', width:'100%', minHeight:'100vh', minWidth:'100vw', backgroundColor:`rgba(${modCloudySky}, ${wrapperOpacity})`}}>
             {children}
-          </div>
+        </div>
+      )
+    }
+    if (cloudy > 60){
+      return(
+        <div style={{height:'100%', width:'100%', minHeight:'100vh', minWidth:'100vw', backgroundColor:`rgba(${cloudySky}, ${wrapperOpacity})`}}>
+            {children}
         </div>
       )
     }
     else{
       return(
-        <div style={{height:"100%",width:"100%",minHeight:"100vh",minWidth:"100vw",backgroundColor:`rgba(${updatedCurrentSky}, ${wrapperOpacity})`}}>
-          <div className="PageWrapper sunnyVersion">
+        <div style={{height:"100%",width:"100%",minHeight:"100vh",minWidth:"100vw",backgroundColor:`rgba(${sunnySky}, ${wrapperOpacity})`}}>
             {children}
-          </div>
         </div>
       )
     }
